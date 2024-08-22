@@ -38,11 +38,13 @@ if __name__ == '__main__':
     filepath = "../data/insurance.csv"
     df = pd.read_csv(filepath)
 
+    # initialize hyperparameters
     m = 0
     b = 0
     learning_rate = 0.0001
     epochs = 300
     
+    # perform gradient descent multiple times to get close to optimal parameters
     for i in range(epochs):
         if i % 50 == 0:
             print(f"Epoch: {i}")
@@ -52,9 +54,11 @@ if __name__ == '__main__':
     print(f"Optimal m and b: {m}, {b}")
     print(f"Final Loss: {calculate_loss(m, b, df)}")
     
+    # get min and max age for plotting
     min_age = int(df.age.min())
     max_age = int(df.age.max())
     
+    # plot the best fitting line on the dataset
     plt.scatter(df.age, df.charges, color='black')
     plt.plot(list(range(min_age, max_age)), [m*x + b for x in range(min_age, max_age)], color='red')
     plt.show()
