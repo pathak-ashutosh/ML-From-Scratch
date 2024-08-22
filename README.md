@@ -4,7 +4,7 @@ This repository contains implementations of various machine learning algorithms 
 
 ## Algorithms Implemented
 
-1. [Linear Regression]()
+1. [Linear Regression](https://github.com/pathak-ashutosh/ml-from-scratch/tree/main/linear-regression)
 
 ## Dependencies
 
